@@ -14,5 +14,77 @@
         <Label Text="Contenido de la pantalla de registro o cálculo"
                FontSize="16"
                HorizontalOptions="Center"/>
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontSize="16"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese nombre" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Apellido:" Grid.Row="1" Grid.Column="0" FontSize="16"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese apellido" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="VA:" Grid.Row="0" Grid.Column="2" FontSize="16"/>
+            <Picker x:Name="pickerVA" Title="Seleccionar VA" Grid.Row="1" Grid.Column="2">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>500</x:String>
+                        <x:String>750</x:String>
+                        <x:String>1000</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+
+        
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Fecha:" Grid.Row="0" Grid.Column="0"/>
+            <DatePicker x:Name="dateFecha" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Ciudad:" Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="pickerCiudad" Title="Seleccione ciudad" Grid.Row="1" Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Cuenca</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Monto Inicial:" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtMonto" Keyboard="Numeric" Placeholder="Ingrese monto" Grid.Row="2" Grid.Column="1"/>
+
+            <Button Text="Calcular Pago Mensual"
+                    Clicked="Button_Clicked_2"
+                    Grid.Row="3" Grid.Column="0"/>
+
+            <Entry x:Name="txtCuota" Placeholder="Cuota mensual"
+                   IsReadOnly="True"
+                   Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+
+       
+        <Button Text="Ver Resumen"
+                Clicked="OnVerResumenClicked"
+                HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>
