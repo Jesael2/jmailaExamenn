@@ -15,8 +15,8 @@ public partial class vCalculoRegistro : ContentPage
     {
         if (double.TryParse(txtMonto.Text, out double montoInicial))
         {
-            // Supongamos que la cuota mensual se calcula como el 10% del monto
-            double cuotaMensual = montoInicial * 0.10;
+            
+            double cuotaMensual = montoInicial * 0.15;
             txtCuota.Text = cuotaMensual.ToString("F2");
         }
         else
