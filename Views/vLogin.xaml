@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmailaExamenn.Views.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="25">
+        <Image Source="menu-web-3-2048x517.jpg"/>
+
+
+        <Label Text="INICIAR SESIÓN"
+               FontSize="20"
+               TextColor="Red"
+               HorizontalOptions="Center" />
+
+        <!-- Formulario en Grid -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Usuario -->
+            <Label Text="USUARIO"
+                   FontSize="18"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <!-- Contraseña -->
+            <Label Text="CONTRASEÑA"
+                   FontSize="18"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese la contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+        </Grid>
+
+        
+        <Button Text="Iniciar Sesión"
+                Clicked="Button_Clicked"/>
+
+ 
+        <Button Text="Registrar"
+                Clicked="Button_Clicked_1" />
+
+
+        <Button Text="Acerca de"
+                Clicked="Button_Clicked_2"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmailaExamenn.Views.vRegistro"
+             Title="vRegistro">
+    <VerticalStackLayout>
+        <Label Text="Registro de Nuevo Usuario"
+               FontSize="20"
+               TextColor="Red"
+               HorizontalOptions="Center"/>
+
+        <Label Text="USUARIO:" FontSize="18"/>
+        <Entry x:Name="txtNuevoUsuario" Placeholder="Ingrese nuevo usuario"/>
+
+        <Label Text="CONTRASEÑA:" FontSize="18"/>
+        <Entry x:Name="txtNuevaContrasena" Placeholder="Ingrese nueva contraseña" IsPassword="True"/>
+
+        <Button Text="Registrar Usuario"
+                Clicked="Button_Clicked"   />
+    </VerticalStackLayout>
+</ContentPage>

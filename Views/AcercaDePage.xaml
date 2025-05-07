@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmailaExamenn.Views.AcercaDePage"
+             Title="AcercaDePage">
+    <VerticalStackLayout>
+        <Label x:Name="lblUsuario"
+               FontSize="18"
+               TextColor="Green"
+               HorizontalOptions="Center" />
+
+        
+        <Label Text="Estudiante: [Tu Nombre]"
+               FontSize="16"
+               HorizontalOptions="Center" />
+        <Label Text="Carrera: Ingeniería en Sistemas"
+               FontSize="16"
+               HorizontalOptions="Center" />
+        <Label Text="Universidad: Israel"
+               FontSize="16"
+               HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
